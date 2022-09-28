@@ -21,13 +21,9 @@ class MainActivity2 : AppCompatActivity() {
         /*launcher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()){
                 result: ActivityResult ->
             if (result.resultCode == RESULT_OK){*/
-        val intent = Intent()
-        val getResult: String? = intent.getStringExtra("k1")
-                binding.textView2.text = getResult.toString()
-                //Log.d("123","2 $getResult")
 
-
-
+        val getResult = intent.getStringExtra("k1") ?: "0000"
+                binding.textView2.text = getResult
 
 
     }

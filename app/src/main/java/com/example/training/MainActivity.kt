@@ -22,10 +22,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.button12.setOnClickListener {
-        var i = Intent(this, MainActivity2::class.java)
-        i.putExtra("k1",binding.editText.text)
-        //setResult(RESULT_OK, i)
-        startActivity(i)
+            val text = binding.textView4.text.toString()
+                var i = Intent(this, MainActivity2::class.java)
+                i.putExtra("k1", text)
+                //setResult(RESULT_OK, i)
+                startActivity(i)
 
 
 
